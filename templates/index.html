@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<div class="hero">
+  <div class="hero-content">
+    <h1>Smart Traffic Flow and Parking Space Management System</h1>
+    <p>
+      A smart AI-powered system that streamlines traffic flow and helps drivers
+      find parking spaces quickly and efficiently.
+    </p>
+    <div class="hero-buttons">
+      <a href="{{ url_for('login') }}" class="btn btn-primary">Get Started</a>
+      <a href="{{ url_for('register') }}" class="btn btn-secondary"
+        >Learn More</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <h3>smart traffic flow</h3>
+    <p>
+      A smart system that uses real-time data to keep traffic moving smoothly
+      and reduce congestion.
+    </p>
+  </div>
+  <div class="feature">
+    <h3>parking space detection</h3>
+    <p>
+      A smart system that identifies available parking spots in real time for
+      easier and faster parking.
+    </p>
+  </div>
+  <!-- <div class="feature">
+        <h3>V2X Communication</h3>
+        <p>Vehicle-to-Everything communication including pedestrians and IoT devices</p>
+    </div> -->
+</div>
+{% endblock %}

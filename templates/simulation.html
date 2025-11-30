@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block content %}
+<div class="simulation-container">
+  <h1>Smart Traffic Flow Simulation</h1>
+
+  <div class="simulation-controls">
+    <button id="start-btn" class="btn btn-primary">Start Simulation</button>
+    <button id="stop-btn" class="btn btn-danger">Stop Simulation</button>
+    <button id="clear-btn" class="btn btn-warning">Clear All Vehicles</button>
+  </div>
+
+  <div class="vehicle-controls">
+    <h3>Add Vehicles to Roads</h3>
+    <div class="control-group">
+      <button id="add-north-btn" class="btn btn-control">
+        Add Vehicles (North)
+      </button>
+      <button id="add-south-btn" class="btn btn-control">
+        Add Vehicles (South)
+      </button>
+      <button id="add-east-btn" class="btn btn-control">
+        Add Vehicles (East)
+      </button>
+      <button id="add-west-btn" class="btn btn-control">
+        Add Vehicles (West)
+      </button>
+    </div>
+  </div>
+
+  <div class="ambulance-controls">
+    <h3>Add Ambulance with Priority</h3>
+    <div class="control-group">
+      <button id="ambulance-north-btn" class="btn btn-control btn-emergency">
+        Ambulance (North)
+      </button>
+      <button id="ambulance-south-btn" class="btn btn-control btn-emergency">
+        Ambulance (South)
+      </button>
+      <button id="ambulance-east-btn" class="btn btn-control btn-emergency">
+        Ambulance (East)
+      </button>
+      <button id="ambulance-west-btn" class="btn btn-control btn-emergency">
+        Ambulance (West)
+      </button>
+    </div>
+  </div>
+
+  <div class="simulation-content">
+    <div class="simulation-canvas-container">
+      <canvas id="simulation-canvas" width="1000" height="1000"></canvas>
+    </div>
+
+    <div class="simulation-sidebar">
+      <!-- <div class="info-panel">
+                <h3>Vehicle Information</h3>
+                <div id="vehicle-info">
+                    <p>Select a vehicle to see details</p>
+                </div>
+            </div> -->
+
+      <div class="events-panel">
+        <h3>Simulation Events</h3>
+        <div id="events-list">
+          <p>No events yet</p>
+        </div>
+      </div>
+
+      <div class="traffic-lights-panel">
+        <h3>Traffic Signals</h3>
+        <div class="traffic-light">
+          <div class="light north">
+            <span>North:</span>
+            <div class="signal" id="north-light">Red</div>
+          </div>
+          <div class="light south">
+            <span>South:</span>
+            <div class="signal" id="south-light">Red</div>
+          </div>
+          <div class="light east">
+            <span>East:</span>
+            <div class="signal" id="east-light">Green</div>
+          </div>
+          <div class="light west">
+            <span>West:</span>
+            <div class="signal" id="west-light">Red</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

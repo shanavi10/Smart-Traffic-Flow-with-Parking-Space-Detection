@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block content %}
+<div class="auth-container">
+  <div class="auth-form">
+    <div class="auth-header">
+      <h2>Login to Smart Traffic Flow and Parking space Detection System</h2>
+      <p>Access your vehicle communication simulation dashboard</p>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <form method="POST" action="{{ url_for('login') }}">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">Login</button>
+    </form>
+
+    <div class="auth-footer">
+      <p>
+        Don't have an account?
+        <a href="{{ url_for('register') }}">Register here</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="auth-info">
+    <div class="auth-info-content">
+      <h3>Smart Traffic Flow and Parking space Detection System</h3>
+      <p>
+        Experience the future of smart mobility with our AI-driven system that
+        optimizes traffic flow and instantly detects parking spaces to reduce
+        congestion and enhance urban travel.
+      </p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <i class="icon">🚦</i>
+          <span>Reduce traffic congestion by optimizing traffic flow.</span>
+        </div>
+        <div class="feature-item">
+          <i class="icon">🚘</i>
+          <span>Detect available parking spaces accurately and quickly.</span>
+        </div>
+        <div class="feature-item">
+          <i class="icon">🛣️</i>
+          <span
+            >Improve overall road safety with smart traffic management.</span
+          >
+        </div>
+        <div class="feature-item">
+          <i class="icon">🏙️</i>
+          <span>Enable scalable connections for smart city expansion.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
