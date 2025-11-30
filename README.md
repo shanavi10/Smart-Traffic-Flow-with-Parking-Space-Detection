@@ -1,2 +1,2 @@
 # Smart-Traffic-Flow-with-Parking-Space-Detection
-Developed an AI-powered traffic and parking management system that simulates real-time vehicle flow, provides ambulance priority signaling, and detects parking entry/exit with automated number plate recognition and fee calculation.
+Built an integrated Smart Traffic Flow and Parking Detection system using computer vision and IoT concepts. Implemented a real-time traffic simulation with dynamic signal control and an ambulance-priority mode that instantly switches signals to green. Developed an automated parking entry/exit workflow with camera-based number plate recognition, vehicle type detection, time logging, and parking fee computation. Included cloud data storage and a live dashboard for monitoring.
